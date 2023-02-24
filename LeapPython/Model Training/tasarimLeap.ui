@@ -1,0 +1,523 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1040</width>
+    <height>782</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QTabWidget" name="tabWidget">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>1041</width>
+      <height>751</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="tab">
+     <attribute name="title">
+      <string>Model Eğit</string>
+     </attribute>
+     <widget class="QLabel" name="label_2">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>90</y>
+        <width>121</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color:rgb(255, 57, 77)</string>
+      </property>
+      <property name="text">
+       <string>Model Seçiniz</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="cmbModel">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>140</y>
+        <width>191</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="currentText">
+       <string>Random Forest</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>Random Forest</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Decision Tree</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>KNN-Classifier</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QLabel" name="lblVeriSeti_2">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>180</y>
+        <width>191</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color:rgb(126, 255, 119)</string>
+      </property>
+      <property name="text">
+       <string>Normalizasyon İşlemi</string>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="rbMinMax">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>230</y>
+        <width>221</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Min-max normalizasyon</string>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="rbStan">
+      <property name="geometry">
+       <rect>
+        <x>240</x>
+        <y>230</y>
+        <width>241</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Standart Scaler Normalizasyon</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="lblVeriSeti_3">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>0</y>
+        <width>301</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color:rgb(255, 170, 127)</string>
+      </property>
+      <property name="text">
+       <string>Test veri kümesi boyutu seçin</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="lblBoyut">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>50</y>
+        <width>71</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>% 25</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="lblACC">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>350</y>
+        <width>331</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>16</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color:rgb(0, 179, 27)</string>
+      </property>
+      <property name="text">
+       <string>Accuracy:</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="lblSen">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>390</y>
+        <width>331</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>16</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color:rgb(0, 179, 27)</string>
+      </property>
+      <property name="text">
+       <string>Sensitivity:</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="lblSpe">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>430</y>
+        <width>331</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>16</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color:rgb(0, 179, 27)</string>
+      </property>
+      <property name="text">
+       <string>Specificity: </string>
+      </property>
+     </widget>
+     <widget class="QSlider" name="hsVeriSetiBoyutu">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>50</y>
+        <width>161</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>8</pointsize>
+       </font>
+      </property>
+      <property name="singleStep">
+       <number>5</number>
+      </property>
+      <property name="sliderPosition">
+       <number>25</number>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="tickPosition">
+       <enum>QSlider::TicksBelow</enum>
+      </property>
+      <property name="tickInterval">
+       <number>5</number>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btnModelEgit">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>270</y>
+        <width>131</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>16</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color:rgb(193, 193, 193)</string>
+      </property>
+      <property name="text">
+       <string>Model Eğit</string>
+      </property>
+     </widget>
+     <widget class="QTableWidget" name="tblX">
+      <property name="geometry">
+       <rect>
+        <x>500</x>
+        <y>50</y>
+        <width>321</width>
+        <height>281</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="lblVeriSeti_4">
+      <property name="geometry">
+       <rect>
+        <x>500</x>
+        <y>0</y>
+        <width>171</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color:rgb(255, 170, 127)</string>
+      </property>
+      <property name="text">
+       <string>Öznitelik Matrisi</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QTableWidget" name="tblY">
+      <property name="geometry">
+       <rect>
+        <x>850</x>
+        <y>50</y>
+        <width>131</width>
+        <height>281</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="lblVeriSeti_5">
+      <property name="geometry">
+       <rect>
+        <x>860</x>
+        <y>0</y>
+        <width>121</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color:rgb(255, 170, 127)</string>
+      </property>
+      <property name="text">
+       <string>Class Bilgisi</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QTableWidget" name="tblXTrain">
+      <property name="geometry">
+       <rect>
+        <x>500</x>
+        <y>390</y>
+        <width>321</width>
+        <height>111</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="lblVeriSeti_6">
+      <property name="geometry">
+       <rect>
+        <x>500</x>
+        <y>340</y>
+        <width>111</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color:rgb(255, 170, 127)</string>
+      </property>
+      <property name="text">
+       <string>X train</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QTableWidget" name="tblYTrain">
+      <property name="geometry">
+       <rect>
+        <x>850</x>
+        <y>390</y>
+        <width>131</width>
+        <height>111</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="lblVeriSeti_7">
+      <property name="geometry">
+       <rect>
+        <x>860</x>
+        <y>340</y>
+        <width>121</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color:rgb(255, 170, 127)</string>
+      </property>
+      <property name="text">
+       <string>Y train</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="lblVeriSeti_8">
+      <property name="geometry">
+       <rect>
+        <x>860</x>
+        <y>510</y>
+        <width>121</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color:rgb(255, 170, 127)</string>
+      </property>
+      <property name="text">
+       <string>Y test</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="lblVeriSeti_9">
+      <property name="geometry">
+       <rect>
+        <x>500</x>
+        <y>510</y>
+        <width>111</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color:rgb(255, 170, 127)</string>
+      </property>
+      <property name="text">
+       <string>X test</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QTableWidget" name="tblYTest">
+      <property name="geometry">
+       <rect>
+        <x>850</x>
+        <y>560</y>
+        <width>131</width>
+        <height>111</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QTableWidget" name="tblXTest">
+      <property name="geometry">
+       <rect>
+        <x>500</x>
+        <y>560</y>
+        <width>321</width>
+        <height>111</height>
+       </rect>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_2">
+     <attribute name="title">
+      <string>Model Tahmin</string>
+     </attribute>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1040</width>
+     <height>26</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
